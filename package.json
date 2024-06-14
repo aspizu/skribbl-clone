@@ -1,0 +1,19 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@preact/signals": "^1.2.3",
+    "prettier": "^3.3.2"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.8.2",
+    "vite-plugin-stylex": "^0.9.0"
+  },
+  "scripts": {
+    "fe": ". env.sh && bunx vite --host $FRONTEND_HOSTNAME --port $FRONTEND_PORT",
+    "build": "bunx vite build",
+    "be": ". env.sh && uvicorn src.backend.application:application --reload --host $VITE_BACKEND_HOSTNAME --port $VITE_BACKEND_PORT"
+  }
+}
